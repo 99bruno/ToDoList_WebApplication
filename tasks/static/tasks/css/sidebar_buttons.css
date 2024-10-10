@@ -1,0 +1,114 @@
+.btn.custom-btn-1 {
+    position: relative;
+    display: inline-block;
+}
+
+.task-buttons .btn:hover {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);}
+
+
+.btn.custom-btn-1 .count {
+    position: absolute;
+    right: 10px; /* Adjust as needed */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px; /* Fixed width */
+    height: 20px; /* Fixed height */
+    line-height: 20px; /* Center text vertically */
+    text-align: center; /* Center text horizontally */
+    background-color: #ced4da;
+    border-radius: 4px; /* Adjust border radius as needed */
+}
+
+.tags-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tags-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.tag, .add-tag {
+    flex: 1;
+    background-color: lightgrey;
+    border: none;
+    border-radius: 8px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: .5vw; /* Responsive font size */
+}
+
+.tag:hover, .add-tag:hover {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.add-tag {
+    background-color: lightblue;
+}
+
+.add-tag:hover {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Styles for buttons in task-buttons div */
+.task-buttons .btn {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    border-radius: 15px;
+    transition: background-color 0.3s;
+    text-align: left;
+    color: black;
+    margin-bottom: 1%;
+    padding: 5px 10px; /* Smaller padding for smaller buttons */
+    font-size: 12px; /* Smaller font size */
+}
+
+/* Styles for buttons in list-buttons div */
+.list-buttons .btn {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    border-radius: 15px;
+    transition: background-color 0.3s;
+    text-align: left;
+    color: black;
+    margin-bottom: 1%;
+    padding: 5px 10px; /* Smaller padding for smaller buttons */
+    font-size: 12px; /* Smaller font size */
+}
+
+.list-buttons .btn:hover {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.list-buttons .btn.active {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.settings {
+}
+
+.settings .btn {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    border-radius: 15px;
+    transition: background-color 0.3s;
+    text-align: left;
+    !important;color: lemonchiffon;
+    margin-bottom: 1%;
+}
+
+.settings .btn:hover {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}

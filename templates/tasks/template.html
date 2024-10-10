@@ -1,0 +1,98 @@
+{% extends 'tasks/base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block content %}
+
+    <div class="container task-container" >
+        <aside class="sidebar">
+            <div class="container tasks" >
+            <h2>Menu</h2>
+            <div class="search search-task">
+                <form id="search-form" method="GET" action="{% url 'all-tasks' %}">
+                    <input type="text" name="search" placeholder="Search tasks..." class="form-control" oninput="submitForm()" onkeypress="checkEnter(event)">
+                </form>
+            </div>
+            <nav>
+                <h5>Tasks</h5>
+                <div class="task-buttons">
+                    <a href="{% url 'overdue-tasks' %}" class="btn custom-btn-1">Overdue<span class="count">{{ overdue_tasks_count }}</span></a>
+                    <a href="{% url 'today-tasks' %}" class="btn custom-btn-1">Today <span class="count">{{ today_tasks_count }}</span></a>
+                    <a href="{% url "all-tasks" %}" class="btn custom-btn-1">All <span class="count">{{ all_tags_count }}</span></a>
+                    <a href="{% url 'completed-tasks' %}" class="btn custom-btn-1">Completed <span class="count">{{ completed_tags_count }}</span></a>
+                </div>
+            </nav>
+                <h5>Tags</h5>
+
+                <div class="tags-container">
+                    <div class="tags-row">
+
+                        {% for tag in first_tags %}
+
+                            <a class="btn tag" type="button" href="{% url 'fiter-by-tag' tag.id %}">{{ tag }}</a>
+
+                        {% endfor %}
+
+                        <a class="btn tag" type="button" href="{% url 'all-tags' %}">Show All</a>
+
+                    </div>
+                    <div class="add-tag-row">
+                        <button class="btn add-tag" type="button" style="width: 100%; height: 100%;" onclick="window.location.href='{% url 'all-tags' %}'">+ Add Tag</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="settings">
+                <!-- <a href="" class="btn custom-btn-3" type="button"><b>&#9776;</b> Settings</a> -->
+
+                <a href="{% url 'logout_user' %}" class="btn custom-btn-3" type="button"><b>&#9211;</b> Sign out</a>
+            </div>
+        </aside>
+
+        <div class="container tasks-list">
+
+            <header>
+                <h1>{{ Text_of_the_page }}:  <span class="task-count">{{ amount }} </span></h1>
+            </header>
+
+            <div class="tasks-content">
+
+                {% block tasks_content %}
+                {% endblock %}
+
+            </div>
+
+        </div>
+
+
+        <aside class="task-detail">
+
+            {% block task_detail %}
+            {% endblock %}
+
+        </aside>
+
+    </div>
+
+{% endblock %}
+
+<script>
+    function submitForm() {
+        document.getElementById('search-form').submit();
+    }
+
+    function checkEnter(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault();
+            submitForm();
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+.task-detail {
+    border-left: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensure tasks are at the top and settings at the bottom */
+    position: relative;
+    padding: 5%;
+    border-right: 1px solid #ddd;
+    border-radius: 8px;
+    background: lightsteelblue;
+    height: 100%; /* Ensure the sidebar takes the full height */
+}
+
+
+
+.detail-options, .subtasks {
+    margin: 20px 0;
+}
+
+.actions button {
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.save-task {
+    background-color: #ffcc00;
+}
+
+.delete-task {
+    background-color: #f28b82;
+}

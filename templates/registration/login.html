@@ -1,0 +1,39 @@
+{% extends "members/base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% block content %}
+
+        <div class="login-container">
+    <h1>Login</h1>
+    <br/>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" class="form-control" name="username" aria-describedby="emailHelp">
+        </div>
+        <div class="form-group">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" name="password">
+        </div>
+        <input type="submit" value="Submit" class="btn btn-secondary custom-login-btn">
+        <br><br>
+        <div style="text-align: center">
+            <b>Don't have account?</b><br><br>
+            <a class="btn custom-login-btn" href="{% url 'register' %}" role="button">Sign up</a>
+        </div>
+
+
+    </form>
+    <br/><br/>
+
+        </div>
+
+    {% endblock %}
+</body>
+</html>

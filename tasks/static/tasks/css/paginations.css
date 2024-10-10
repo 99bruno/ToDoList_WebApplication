@@ -1,0 +1,24 @@
+/* Контейнер завдань */
+.tasks-list {
+    display: flex;
+    border-radius: 15px;
+    flex-direction: column;
+    height: 100%; /* Встановлюємо фіксовану висоту контейнера */
+    overflow: hidden; /* Забороняємо контенту виходити за межі */
+    /*border: 1px solid #ddd; */
+    padding: 15px;
+}
+
+/* Контент завдань */
+.tasks-content {
+    flex-grow: 1;
+    overflow-y: auto; /* Додаємо скрол тільки до контенту */
+}
+
+/* Секція з контентом завдань */
+.task-list-content {
+    margin-bottom: 10px; /* Додаємо відступ від пагінації */
+}
+
+
+

@@ -1,0 +1,90 @@
+.add.task {
+    width: 100%; /* Make the div span the full width of its container */
+    margin-bottom: 20px; /* Add margin to separate it from other elements */
+}
+
+.full-width-btn {
+    width: 100%;
+    font-size: 1rem; /* Increased font size */
+    border-radius: 15px;
+    border-color: #ced4da;
+    color: lightslategrey;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.full-width-btn:hover {
+    box-shadow: 0 20px 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    color: black;
+    border-radius: 15px;
+}
+
+/* task count */
+.task-count {
+    font-size: .7em;
+    color: black;
+    font-weight: bold;
+    border: 2px solid #ced4da;
+    border-radius: 5px;
+    width: 7%; /* Set the width */
+    height: 21%; /* Set the height */
+    display: inline-flex; /* Use inline-flex to keep it on the same line */
+    align-items: center;
+    justify-content: center;
+}
+
+/* Task List */
+
+.custom-card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.custom-card {
+    border: 1px solid #ced4da;
+    border-radius: 15px;
+    transition: box-shadow 0.3s;
+}
+
+.custom-card:hover {
+    box-shadow: 0 20px 10px rgba(0, 0, 0, 0.1);
+}
+
+.custom-form-check-input,
+.custom-form-check-label {
+    vertical-align: middle;
+}
+
+.custom-card-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.custom-form-check {
+    display: flex;
+    align-items: center;
+}
+
+.custom-form-check-input {
+    margin-right: 10px; /* Adjust the margin as needed */
+}
+
+.custom-form-check-label {
+    font-size: 1rem;
+}
+
+.custom-btn {
+    font-size: .7rem;
+    color: #6c757d;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.custom-btn:hover {
+    background-color: #5a6268;
+}

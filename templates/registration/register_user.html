@@ -1,0 +1,30 @@
+{% extends "members/base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% block content %}
+
+        <div class="login-container">
+    <h1>Sign Up</h1>
+    <br/>
+    <form action="{% url 'register' %}" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <input type="submit" value="Submit" class="btn btn-secondary custom-login-btn">
+        <br><br>
+        <div style="text-align: center">
+            <b>Have account?</b><br><br>
+            <a class="btn custom-signin-btn" href="{% url 'login' %}" role="button">Login</a>
+        </div>
+    </form>
+    <br/><br/>
+        </div>
+
+    {% endblock %}
+</body>
+</html>

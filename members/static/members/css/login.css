@@ -1,0 +1,87 @@
+body {
+    background: #aecbfa;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    background-color: #aecbfa;
+}
+
+.login-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.login-container .form-group {
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-container .form-label {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.login-container .form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 15px;
+    border: 1px solid #ced4da;
+}
+
+.custom-login-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2rem;
+    border-radius: 15px;
+    background-color: grey;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.custom-login-btn:hover {
+    background-color: #5a6268;
+}
+
+
+
+.custom-signup-btn {
+    background-color: #ff5733; /* Custom background color */
+    color: white; /* Custom text color */
+    border: none; /* Remove default border */
+    padding: 5% 10%; /* Custom padding */
+    border-radius: 15px; /* Rounded corners */
+    font-size: 1rem; /* Custom font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.custom-signup-btn:hover {
+    background-color: #c70039; /* Darker background on hover */
+    color: #f1f1f1; /* Lighter text color on hover */
+}
+
+.custom-signin-btn {
+    background-color: lightgreen; /* Custom background color */
+    color: black; /* Custom text color */
+    border: none; /* Remove default border */
+    padding: 2.5% 5%; /* Custom padding */
+    border-radius: 15px; /* Rounded corners */
+    font-size: 1rem; /* Custom font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.custom-signin-btn:hover {
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+    color: #f1f1f1; /* Lighter text color on hover */
+}
